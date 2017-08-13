@@ -32,6 +32,9 @@ import { Vendor4Page } from '../pages/vendor4/vendor4';
 
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 

@@ -8,13 +8,29 @@
 
 <ion-content>
 
-  <ion-list>
+ <ion-item  [navPush]="translatorPage">
+    <ion-icon name="md-repeat" item-left large ></ion-icon>
+    <h2>Translator</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+</ion-item>
 
-    <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
-    </ion-item>
+ <ion-item  [navPush]="rulesPage">
+    <ion-icon name="md-list" item-left large ></ion-icon>
+    <h2>Rules</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
 
-  </ion-list>
+  <ion-item  [navPush]="emergencyPage">
+    <ion-icon name="md-call" item-left large ></ion-icon>
+    <h2>Emergency</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
+
+  <ion-item  [navPush]="settingsPage">
+    <ion-icon name="md-settings" item-left large ></ion-icon>
+    <h2>Settings</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
+
 
 </ion-content>

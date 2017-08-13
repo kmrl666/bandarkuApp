@@ -3,12 +3,21 @@ import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import { AlertController } from 'ionic-angular';
 
+import { TranslatorPage } from '../translator/translator';
+import { RulesPage } from '../rules/rules';
+import { EmergencyPage } from '../emergency/emergency';
+import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-misc',
   templateUrl: 'misc.html'
 })
 export class MiscPage {
+
+  translatorPage = TranslatorPage;
+  rulesPage = RulesPage;
+  emergencyPage = EmergencyPage;
+  settingsPage = SettingsPage;
 
 tasks: FirebaseListObservable<any[]>;
 

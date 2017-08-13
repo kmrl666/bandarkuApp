@@ -11,8 +11,9 @@
   <ion-list>
 
     <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
+      <ion-icon name="md-pin" item-start large></ion-icon>
+      <h2>{{task.Name}}</h2>
+      <p>{{task.Type}}</p>
     </ion-item>
 
   </ion-list>

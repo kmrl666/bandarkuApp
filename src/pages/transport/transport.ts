@@ -5,6 +5,7 @@ import { AlertController } from 'ionic-angular';
 
 import { BikerentalPage } from '../bikerental/bikerental';
 import { BikeroutesPage } from '../bikeroutes/bikeroutes';
+import { ParkingPage } from '../parking/parking';
 
 
 @Component({
@@ -12,8 +13,10 @@ import { BikeroutesPage } from '../bikeroutes/bikeroutes';
   templateUrl: 'transport.html'
 })
 export class TransportPage {
-  aboutPage = BikerentalPage;
-  contactPage = BikeroutesPage;
+  bikerentPage = BikerentalPage;
+  bikeroutesPage = BikeroutesPage;
+  parkingPage = ParkingPage;
+
 
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public alertCtrl: AlertController) {
 

@@ -1,20 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Vendor 1
+      Bike Routes
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
 
-    <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
-    </ion-item>
+ <ion-item  [navPush]="threePage">
+    <ion-icon name="md-pin" item-left large ></ion-icon>
+    <h2>3KM Route</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+</ion-item>
 
-  </ion-list>
+ <ion-item  [navPush]="fivePage">
+    <ion-icon name="md-pin" item-left large ></ion-icon>
+    <h2>5KM Route</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
+
+  <ion-item  [navPush]="tenPage">
+    <ion-icon name="md-pin" item-left large ></ion-icon>
+    <h2>10KM Route</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
 
 </ion-content>

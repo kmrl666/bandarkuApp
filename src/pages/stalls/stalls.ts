@@ -14,7 +14,7 @@ tasks: FirebaseListObservable<any[]>;
 
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public alertCtrl: AlertController) {
 
-  	  this.tasks = db.list('/tasks/Bicycle/Vendor1');
+  	  this.tasks = db.list('/tasks/Stall');
 
   }
 

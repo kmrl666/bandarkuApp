@@ -3,12 +3,19 @@ import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import { AlertController } from 'ionic-angular';
 
+import { ThreePage } from '../three/three';
+import { FivePage } from '../five/five';
+import { TenPage } from '../ten/ten';
 
 @Component({
   selector: 'page-bikeroutes',
   templateUrl: 'bikeroutes.html'
 })
 export class BikeroutesPage {
+
+  threePage = ThreePage;
+  fivePage = FivePage;
+  tenPage = TenPage;
 
 tasks: FirebaseListObservable<any[]>;
 
