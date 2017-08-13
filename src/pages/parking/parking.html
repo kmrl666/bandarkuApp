@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Parking</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let task of tasks | async">
+      <p>{{task.name}}</p>
+      <p>Available Parking: {{task.amount}}</p>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

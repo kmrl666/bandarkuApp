@@ -5,16 +5,16 @@ import { AlertController } from 'ionic-angular';
 
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-five',
+  templateUrl: 'five.html'
 })
-export class HomePage {
+export class FivePage {
 
 tasks: FirebaseListObservable<any[]>;
 
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public alertCtrl: AlertController) {
 
-  	  this.tasks = db.list('/tasks/Ads/');
+  	  this.tasks = db.list('/tasks/Bicycle/Vendor1');
 
   }
 
