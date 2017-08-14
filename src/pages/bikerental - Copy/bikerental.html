@@ -1,0 +1,72 @@
+// <script language="javascript">
+
+//   function getpusher(){
+//       var input = document.getElementById("pushing").value
+//       var output = String(input);
+//       return output;
+// }
+
+</script>
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Vendor 1
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<!--   <ion-list>
+    <ion-item *ngFor="let task of tasks | async">
+     <input type="text" id= "pushing" value="vendor1Page">
+      <ion-item [navPush]="getpusher()">
+      <ion-icon name="md-bicycle" item-left large ></ion-icon>
+      <h2>{{task.Name}}</h2>
+      <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+      </ion-item>
+    </ion-item> -->
+      <ion-item *ngFor="let house of countryList">
+      <ion-item (click)="detailselected(house)">
+      <ion-icon name="md-bicycle" item-left large ></ion-icon>
+      <h2>{{house.Name}}</h2>
+      <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+      </ion-item>
+      </ion-item>
+
+
+<!--         <button ion-item (click)="detailselected(house)"> 
+          <img src="{{house.Thumb}}">  </button>
+          <ion-card>
+          <h3 style="text-align: center;"> {{task.Name}} </h3>
+          <p style="text-align: center;"> {{house.Location}}, {{house.Price}} </p>
+        </ion-card>
+  
+  </ion-item> -->
+
+<!--     <ion-list>
+    <ion-item *ngFor="let task of tasks | async">
+      <ion-item [navPush]="{{task.Pusher}}">
+      <ion-icon name="md-bicycle" item-left large ></ion-icon>
+      <h2>{{task.Name}}</h2>
+      <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+      </ion-item>
+    </ion-item>
+
+  </ion-list> -->
+
+<!--    <ion-list>
+    <ion-item *ngFor="let house of countryList">
+  
+        <button ion-item (click)="detailselected(house)"> 
+          <img src="{{house.Thumb}}">  </button>
+          <ion-card>
+          <h3 style="text-align: center;"> {{house.title}} </h3>
+          <p style="text-align: center;"> {{house.Location}}, {{house.Price}} </p>
+        </ion-card>
+  
+  </ion-item>
+</ion-list> -->
+
+</ion-content>

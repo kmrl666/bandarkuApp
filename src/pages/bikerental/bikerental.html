@@ -1,44 +1,54 @@
-// <script language="javascript">
-
-//   function getpusher(){
-//       var input = document.getElementById("pushing").value
-//       var output = String(input);
-//       return output;
-// }
-
-</script>
-
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Vendor 1
+      Bike Rental
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+<p>INSERT MAP HERE</p>
 
-  <ion-list>
-    <ion-item *ngFor="let task of tasks | async">
-     <input type="text" id= "pushing" value="{{task.Pusher}}">
-      <ion-item [navPush]="getpusher()">
-      <ion-icon name="md-bicycle" item-left large ></ion-icon>
-      <h2>{{task.Name}}</h2>
-      <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+<!--     <ion-slides>
+      <ion-slide *ngFor="let task of tasks | async"> -->
+<!--       <p>{{task.Name}}</p>
+      <p>Availablity: {{task.Link}}</p> -->
+<ion-item *ngFor="let task of tasks | async">
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-icon name="bicycle" item-left></ion-icon>
+        {{task.Name}}
       </ion-item>
-    </ion-item>
 
-  </ion-list>
+      <ion-list>
 
-<!--     <ion-list>
-    <ion-item *ngFor="let task of tasks | async">
-      <ion-item [navPush]="{{task.Pusher}}">
-      <ion-icon name="md-bicycle" item-left large ></ion-icon>
-      <h2>{{task.Name}}</h2>
-      <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-      </ion-item>
-    </ion-item>
+        <ion-item>
+          Becha: {{task.Becha}}
+        </ion-item>
 
-  </ion-list> -->
+        <ion-item>
+          Fixie: {{task.Fixie}}
+        </ion-item>
+
+        <ion-item>
+          Kids: {{task.Kids}}
+        </ion-item>
+        
+        <ion-item>
+          Mountain: {{task.Mountain}}
+        </ion-item>
+
+        <ion-item>
+          Road: {{task.Road}}
+        </ion-item>
+
+      </ion-list>
+    </ion-list>
+  </ion-card>
+</ion-item>
+<!-- </ion-slide>
+
+</ion-slides> -->
 
 </ion-content>
