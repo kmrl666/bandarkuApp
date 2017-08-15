@@ -7,44 +7,45 @@
 </ion-header>
 
 <ion-content>
-
+<div style="overflow:auto;">
   <ion-slides>
-      <ion-slide *ngFor="let task of tasks | async">
-      <ion-img src="{{task.Image}}"></ion-img>
+    <ion-slide *ngFor="let task of tasks | async">
+      <img src="{{task.Image}}">
 
-  <ion-card>
-    <ion-list>
+      <ion-card>
+       <ion-list>
 
-      <ion-item>
-        <ion-icon name="bicycle" item-left></ion-icon>
-        {{task.Name}}
-      </ion-item>
+        <ion-item text-wrap>
+          <ion-icon name="{{task.Icon}}" item-left></ion-icon>
+          {{task.Name}}
+        </ion-item>
 
-        <ion-list>
-
-          <ion-item>
-            Type: {{task.Type}}
+          <ion-item text-wrap>
+            Type: 
+            <p>{{task.Type}}</p>
           </ion-item>
 
-          <ion-item>
-            Organizer: {{task.Organizer}}
+          <ion-item text-wrap>
+            Organizer: 
+            <p>{{task.Organizer}}</p>
           </ion-item>
 
-          <ion-item>
-            Link: {{task.Link}}
+          <ion-item text-wrap>
+            Link:
+            <p>{{task.Link}}</p>
           </ion-item>
           
-          <ion-item>
-            Description: {{task.Description}}
+          <ion-item text-wrap>
+            Description: 
+            <p>{{task.Description}}</p>
           </ion-item>
 
+
         </ion-list>
-
-      </ion-list>
-    </ion-card>
-    <br>
-    <br>
-  </ion-slide>
+      </ion-card>
+      <br>
+      <br>
+    </ion-slide>
   </ion-slides>
-
+</div>
 </ion-content>
