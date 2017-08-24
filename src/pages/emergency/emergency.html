@@ -8,13 +8,22 @@
 
 <ion-content>
 
-  <ion-list>
+  <ion-item  [navPush]="bikerentPage">
+    <ion-icon name="md-bicycle" item-left large ></ion-icon>
+    <h2>Police</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+</ion-item>
 
-    <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
-    </ion-item>
+ <ion-item  [navPush]="bikeroutesPage">
+    <ion-icon name="md-map" item-left large ></ion-icon>
+    <h2>Fire Brigade</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
 
-  </ion-list>
+  <ion-item  [navPush]="parkingPage">
+    <ion-icon name="md-car" item-left large ></ion-icon>
+    <h2>Ambulance</h2>
+    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+  </ion-item>
 
 </ion-content>

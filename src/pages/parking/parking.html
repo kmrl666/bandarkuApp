@@ -9,12 +9,14 @@
 
     <ion-item *ngFor="let task of tasks | async">
       <p>{{task.name}}</p>
+<!--       <p ng-class="{'color-red': task.status === 'Closed', 'color-green': task.status === 'Open', 'color-blue': task.status === 'Ignored'}">{{task.status}}</p> -->
+      
+      <p>{{task.status}}</p>
+
       <p>Available Parking: {{task.amount}}</p>
     </ion-item>
 
   </ion-list>
 
-  <ion-item>
-    </ion-item>
 
 </ion-content>
