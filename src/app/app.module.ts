@@ -38,6 +38,26 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular'; 
+
+const cloudSettings: CloudSettings = {  
+  'core': {  
+      'app_id': '6b8410f6',  
+  },  
+  'push': {  
+      'sender_id': '183746070699',  
+      'pluginConfig': {  
+          'ios': {  
+              'badge': true,  
+              'sound': true  
+          },  
+          'android': {  
+              'iconColor': '#343434'  
+          }  
+      }  
+  }  
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -72,6 +92,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(environment.firebase),
+    CloudModule.forRoot(cloudSettings),
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],

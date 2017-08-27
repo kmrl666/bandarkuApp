@@ -1,5 +1,6 @@
 {
   "name": "Bandarku App",
-  "app_id": "542249b1",
-  "type": "ionic-angular"
+  "app_id": "6b8410f6",
+  "type": "ionic-angular",
+  "dev_push": true
 }

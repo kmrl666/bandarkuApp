@@ -1,26 +1,45 @@
 
-  <ion-content padding>
+  <ion-content>
+
+  <br>
+  <br>
+  <ion-grid text-center>
+    <ion-row>
+    <ion-col>
+    <img src="../../assets/img/transport.svg" [navPush]="bikerentPage">
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
   <br>
 
-  <ion-item  [navPush]="bikerentPage">
-    <ion-icon name="md-bicycle" item-left large ></ion-icon>
-    <h2>Bike Rental</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-</ion-item>
+  <ion-grid text-center>
+      <ion-row>
+          <ion-col>
+          <img src="../../assets/img/rentmin.svg" [navPush]="bikerentPage">
+          </ion-col>
 
- <ion-item  [navPush]="bikeroutesPage">
-    <ion-icon name="md-map" item-left large ></ion-icon>
-    <h2>Bike Routes</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-  </ion-item>
+          <ion-col>
+          <img src="../../assets/img/routmin.svg" [navPush]="bikeroutesPage">
+          </ion-col>
+      </ion-row>
 
-  <ion-item  [navPush]="parkingPage">
-    <ion-icon name="md-car" item-left large ></ion-icon>
-    <h2>Parking Area</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-  </ion-item>
+      <ion-row text-center>
+          <ion-col >
+          <img src="../../assets/img/parkmin.svg" [navPush]="parkingPage" width="58%">
+          </ion-col>
+          
+      </ion-row>
+
+    </ion-grid>
+
+
 
   </ion-content>
+
+      <!-- <img src="../../assets/img/brental.svg" [navPush]="bikerentPage" height="33.3%">  
+    <img src="../../assets/img/broutes.svg" [navPush]="bikeroutesPage" height="33.3%">    
+    <img src="../../assets/img/parea.svg" [navPush]="parkingPage" height="33.3%">   -->
   
   <!-- box code  -->
 

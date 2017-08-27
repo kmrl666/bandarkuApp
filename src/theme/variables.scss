@@ -38,6 +38,8 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
+  bluebackg:  #CCFFFF,
+  darkestb:   #03838F,
   dark:       #F07B21
 );
 
@@ -52,6 +54,15 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+ion-content{
+  background: #E3F3F7 !important;
+}
+
+// .tabs-md .tab-button[aria-selected=true] {
+//   color: #03838F; /*your  text color */
+//   background: #00acc1; /* your background color*/
+// }
+
 
 
 
