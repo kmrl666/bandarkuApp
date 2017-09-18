@@ -1,10 +1,74 @@
 <ion-content>
-  <ion-item>
-    <ion-icon name="md-camera" item-start large></ion-icon>
-    <h2>#bandarkuCeria</h2>
-    <p>on Instagram by @Bandarku.bwn</p>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      
+  <!-- <ion-item  style="background-color:#05788B">
+    <ion-icon name="md-camera" item-start large style="color:white"></ion-icon>
+    <h2 style="color:white">#bandarkuCeria</h2>
+    <p style="color:white">on Instagram by @Bandarku.bwn</p>
+  </ion-item> -->
+
+
+   <!-- if you want to revert to the old one, comment from here-->
+
+
+  <ion-item  style="background-color:#05788B">
+    <h2 style="color:white">@bandarku.bn on Instagram</h2>
+    <!-- <ion-icon name='md-refresh' item-end small style="color:white" ></ion-icon> -->
   </ion-item>
-  <iframe src="//lightwidget.com/widgets/f2703b7158f0598b8eb8b89a53d02743.html" 
+  
+
+  <ion-grid *ngFor="let task of tasks | async">
+    <ion-row>
+
+      <ion-col align-self-center>
+          <ion-avatar item-start>
+              <img style="width:80%;" src="./assets/img/icon.png">
+            </ion-avatar>
+      </ion-col>
+
+      <ion-col text-center align-self-center>
+          {{task.Posts}}<br>
+          <ion-note>posts</ion-note>
+      </ion-col>
+
+          <ion-col text-center align-self-center>
+            {{task.Followers}}<br>
+          <ion-note>followers</ion-note>
+      </ion-col>
+
+          <ion-col text-center align-self-center>
+            {{task.Following}}<br>
+          <ion-note>following</ion-note>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-3>
+      </ion-col>
+
+      <ion-col no-padding>
+          <a href="http://www.instagram.com/bandarku.bwn"><button ion-button small block>Follow</button></a>
+      </ion-col>
+
+
+        </ion-row>
+  </ion-grid>
+  <ion-item text-wrap text-center style="background-color:transparent !important;">
+    <p> Get your photos here by adding #BandarkuCeria on your Instagram post!</p>
+  </ion-item>
+
+
+  <!-- to here-->
+
+  <iframe src="http://www.lightwidget.com/widgets/0f421fbdfa8a56c8adc556e562f6aa1c.html" 
     allowtransparency="true" style="width: 100%; height: 100%; border: 0; ">
   </iframe>
+  
+  <a href="http://www.instagram.com/bandarku.bwn"><button ion-button block >View more on our instagram!</button></a>
+
 </ion-content>

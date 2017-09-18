@@ -1,20 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Vendor 1
+      Rules
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
+  <!-- <ion-list>
 
     <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
+      <p>{{task.Rule}}</p>
     </ion-item>
 
-  </ion-list>
+  </ion-list> --> 
+
+<ion-card *ngFor="let task of tasks | async">
+  
+    <ion-card-header text-wrap style="background-color:#05788B">
+        <h2 text-wrap style="color:white">{{task.Name}}</h2>
+    </ion-card-header>
+
+    <ion-card-content text-wrap>
+      <br>
+       <p>{{task.Rule}}</p>
+    </ion-card-content>
+
+</ion-card>
+
 
 </ion-content>

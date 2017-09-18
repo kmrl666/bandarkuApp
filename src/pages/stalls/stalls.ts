@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import { AlertController } from 'ionic-angular';
 
+import { StallsMapPage } from '../stallsmap/stallsmap'
+
 
 @Component({
   selector: 'page-stalls',
@@ -12,11 +14,56 @@ export class StallsPage {
 
 tasks: FirebaseListObservable<any[]>;
 
+
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public alertCtrl: AlertController) {
 
-  	  this.tasks = db.list('/tasks/Stall');
+  	  this.tasks = db.list('/tasks/Stall', {
+        query: {
+          orderByChild: 'Name',
+        }
+      });
 
   }
+  
+
+
+  ionViewWillEnterType(){
+    this.myDefaultMethodToFetchDataType();
+}
+
+refreshType() {
+this.ionViewWillEnterType();
+}
+
+myDefaultMethodToFetchDataType()
+{
+    this.tasks = this.db.list('/tasks/Stall', {
+      query: {
+        orderByChild: 'Type',
+        
+      }
+    });
+  }
+    
+
+    ionViewWillEnterVendor(){
+      this.myDefaultMethodToFetchDataVendor();
+  }
+  
+  refreshVendor() {
+  this.ionViewWillEnterVendor();
+  }
+  
+  myDefaultMethodToFetchDataVendor()
+  {
+      this.tasks = this.db.list('/tasks/Stall', {
+        query: {
+          orderByChild: 'Name',
+          
+        }
+      });
+    
+}
 
    updateTask(key, amount) {
     this.tasks.update(key, {amount: amount});
@@ -30,6 +77,14 @@ tasks: FirebaseListObservable<any[]>;
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  navigate(Name, Longtitude, Latitude) {
+    this.navCtrl.push(StallsMapPage, {
+      firstPassed: Name,
+      secondPassed: Longtitude,
+      thirdPassed: Latitude,
+    })
   }
 
 }

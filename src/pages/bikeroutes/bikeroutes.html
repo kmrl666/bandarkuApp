@@ -6,25 +6,45 @@
   </ion-navbar>
 </ion-header>
 
+
+
 <ion-content>
-
-
- <ion-item  [navPush]="threePage">
-    <ion-icon name="md-pin" item-left large ></ion-icon>
-    <h2>3KM Route</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-</ion-item>
-
- <ion-item  [navPush]="fivePage">
-    <ion-icon name="md-pin" item-left large ></ion-icon>
-    <h2>5KM Route</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-  </ion-item>
-
-  <ion-item  [navPush]="tenPage">
-    <ion-icon name="md-pin" item-left large ></ion-icon>
-    <h2>10KM Route</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-  </ion-item>
-
-</ion-content>
+    
+      <!-- <br>
+      <br>
+      <ion-title text-center>
+    
+        <h1 style="color:#05788B;">TRANSPORT</h1>
+    
+      </ion-title>
+      <br>
+      <br>
+     -->
+     <br>
+     <br>
+     <br>
+     <br>
+      <ion-grid text-center>
+          <ion-row>
+              <ion-col>
+              <img src="./assets/img/3KM.png" [navPush]="threePage">
+              </ion-col>
+    
+              <ion-col>
+              <img src="./assets/img/5KM.png" [navPush]="fivePage">
+              </ion-col>
+          </ion-row>
+    
+          <ion-row text-center>
+              <ion-col >
+              <img src="./assets/img/10KM.png" [navPush]="tenPage" width="50%">
+              </ion-col>
+              
+          </ion-row>
+    
+        </ion-grid>
+    
+    
+    
+      </ion-content>
+    

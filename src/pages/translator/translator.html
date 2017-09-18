@@ -1,20 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Vendor 1
+      Translator
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
-
-    <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
-    </ion-item>
-
-  </ion-list>
+  <iframe src="./assets/html/translated.html" 
+  allowtransparency="true" style="width: 100%; height: 100%; border: 0; ">
+</iframe>
 
 </ion-content>

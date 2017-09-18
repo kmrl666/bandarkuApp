@@ -14,7 +14,7 @@ tasks: FirebaseListObservable<any[]>;
 
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public alertCtrl: AlertController) {
 
-  	  this.tasks = db.list('/tasks/Bicycle/Vendor1');
+  	  this.tasks = db.list('/tasks/Instagram/');
 
   }
 
@@ -32,4 +32,13 @@ tasks: FirebaseListObservable<any[]>;
     alert.present();
   }
 
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
+  
 }

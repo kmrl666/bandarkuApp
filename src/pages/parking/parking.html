@@ -5,16 +5,26 @@
 </ion-header>
 
 <ion-content>
+<div id="map"></div>
   <ion-list>
 
-    <ion-item *ngFor="let task of tasks | async">
+    <!-- <ion-item *ngFor="let task of tasks | async">
       <p>{{task.name}}</p>
-<!--       <p ng-class="{'color-red': task.status === 'Closed', 'color-green': task.status === 'Open', 'color-blue': task.status === 'Ignored'}">{{task.status}}</p> -->
       
       <p>{{task.status}}</p>
 
       <p>Available Parking: {{task.amount}}</p>
-    </ion-item>
+    </ion-item> -->
+
+    <ion-card *ngFor="let task of tasks | async" >
+      
+        <ion-item style="background-color:#05788B">
+            <h2 text-wrap style="color:white">{{task.name}}</h2>
+            <p style="color:white">{{task.status}}</p>
+            <p style="color:white">Available Parking: {{task.amount}}</p>
+          </ion-item>
+  
+    </ion-card>
 
   </ion-list>
 

@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       Misc
@@ -9,7 +9,7 @@
 <ion-content>
 
  <ion-item  [navPush]="translatorPage">
-    <ion-icon name="md-repeat" item-left large ></ion-icon>
+    <ion-icon name="md-alarm" item-left large ></ion-icon>
     <h2>Translator</h2>
     <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
 </ion-item>
@@ -31,6 +31,50 @@
     <h2>Settings</h2>
     <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
   </ion-item>
+
+  <ion-item  (click)="addFeedback()">
+      <ion-icon name="md-settings" item-left large ></ion-icon>
+      <h2>Feedback</h2>
+      <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
+    </ion-item> -->
+
+    <ion-content>
+        
+          <br>
+          <br>
+          <ion-title text-center>
+        
+            <h1 style="color:#05788B;">MISCELLANEOUS</h1>
+        
+          </ion-title>
+          <br>
+          <br>
+        
+          <ion-grid text-center>
+              <ion-row>
+                  <ion-col>
+                  <img src="./assets/img/translator.svg" [navPush]="translatorPage">
+                  </ion-col>
+        
+                  <ion-col>
+                  <img src="./assets/img/rules.svg" [navPush]="rulesPage">
+                  </ion-col>
+              </ion-row>
+
+              <ion-row>
+                  <ion-col>
+                  <img src="./assets/img/emergency.svg" [navPush]="emergencyPage">
+                  </ion-col>
+        
+                  <ion-col>
+                  <img src="./assets/img/settings.svg"  [navPush]="settingsPage">
+                  <!-- <img src="./assets/img/feedback.svg" (click)="addFeedback()"> -->
+                  </ion-col>
+              </ion-row>
+        
+            </ion-grid>
+
+
 
 
 </ion-content>

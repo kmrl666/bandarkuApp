@@ -8,11 +8,11 @@ declare var google;
   var labelIndex = 0;
 
 @Component({
-  selector: 'page-parking',
-  templateUrl: 'parking.html'
+  selector: 'page-rentalmap',
+  templateUrl: 'rentalmap.html'
 })
 
-export class ParkingPage {
+export class RentalMapPage {
   map: any;
   image: any;
   markers: any = [];
@@ -23,22 +23,17 @@ tasks: FirebaseListObservable<any[]>;
     setTimeout(function () {
       that.GoogleMap();
     },2000)
-  this.tasks = db.list('/tasks/Parking');
+  	  this.tasks = db.list('/tasks/Bicycle/');
 
   }
 
   GoogleMap() {
 
-    var latlng = [['Yayasan SHHB', 4.88690139, 114.94057551, 7],
-                  ['PGGMB', 4.89016178, 114.94344682, 6],
-                  ['Lapau', 4.89365199, 114.94181335, 5],
-                  ['Kianggeh', 4.88596603, 114.94956762, 4],
-                  ['Pusat Belia', 4.894386, 114.942812, 3],
-                  ['Jabatan Elektrik', 4.89054661, 114.94340524, 2], 
-                 ['Chung Hwa Middle School', 4.89408225, 114.94395509, 1]];
+    var latlng =[['Jabatan Elektrik', 4.890612, 114.943378, 2], 
+                 ['Lapau', 4.893865, 114.941754, 1]];
     this.map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
-          center: {lat: 4.89016178, lng: 114.94344682}
+          center: {lat: 4.8899654, lng: 114.941476}
         });
 
   var marker, i;
@@ -60,15 +55,15 @@ tasks: FirebaseListObservable<any[]>;
   }
   }
 
-  updateTask(key, amount) {
+   updateTask(key, amount) {
     this.tasks.update(key, {amount: amount});
     this.showAlert();
-  }
+      }
 
  showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Success!',
-      subTitle: 'Parking has been updated.',
+      subTitle: 'Bike Availability has been updated.',
       buttons: ['OK']
     });
     alert.present();

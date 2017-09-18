@@ -1,29 +1,51 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Vendor 1
+     Emergency Call
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-item  [navPush]="bikerentPage">
-    <ion-icon name="md-bicycle" item-left large ></ion-icon>
-    <h2>Police</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-</ion-item>
+  <ion-card>
+      
+        <ion-item style="background-color:#05788B" (click)="presentConfirm('993', 'Police')">
+            <ion-icon name="md-ribbon" item-start large style="color:white"></ion-icon>
+            <h2 text-wrap style="color:white">Police</h2>
+            <ion-icon name="ios-arrow-forward" item-right large style="color:white" ></ion-icon>
+        </ion-item>
 
- <ion-item  [navPush]="bikeroutesPage">
-    <ion-icon name="md-map" item-left large ></ion-icon>
-    <h2>Fire Brigade</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-  </ion-item>
+      </ion-card>
 
-  <ion-item  [navPush]="parkingPage">
-    <ion-icon name="md-car" item-left large ></ion-icon>
-    <h2>Ambulance</h2>
-    <ion-icon name="ios-arrow-forward" item-right large ></ion-icon>
-  </ion-item>
+      <ion-card>
+
+        <ion-item style="background-color:#05788B" (click)="presentConfirm('995', 'Fire and Rescue')">
+            <ion-icon name="md-bonfire" item-start large style="color:white"></ion-icon>
+            <h2 text-wrap style="color:white">Fire and Rescue</h2>
+            <ion-icon name="ios-arrow-forward" item-right large style="color:white" ></ion-icon>
+        </ion-item>
+
+      </ion-card>
+
+         <ion-card>
+
+        <ion-item style="background-color:#05788B" (click)="presentConfirm('991', 'Ambulance')">
+            <ion-icon name="md-moon" item-start large style="color:white"></ion-icon>
+            <h2 text-wrap style="color:white">Ambulance</h2>
+            <ion-icon name="ios-arrow-forward" item-right large style="color:white"></ion-icon>
+        </ion-item>
+
+       </ion-card>
+
+        <ion-card>
+
+        <ion-item style="background-color:#05788B" (click)="presentConfirm('998', 'Search and Rescue')">
+            <ion-icon name="md-search" item-start large style="color:white"></ion-icon>
+            <h2 text-wrap style="color:white">Search and Rescue</h2>
+            <ion-icon name="ios-arrow-forward" item-right large style="color:white"></ion-icon>
+        </ion-item>
+
+      </ion-card>
 
 </ion-content>

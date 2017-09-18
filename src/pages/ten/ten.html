@@ -1,20 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      10km
+      10KM Route
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
+    <!-- <iframe src="https://www.google.com.bn/maps/dir/4.8890939,114.9427277/4.8938043,114.9366032/4.8946273,114.936269/4.9235088,114.9367791/4.9122825,114.9495858/4.8890821,114.9428764/@4.8988172,114.9354305,15z/data=!4m2!4m1!3e2?hl=en"  frameborder="0" style="border:0" allowfullscreen></iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d15900.682738803187!2d114.9319973091167!3d4.91108884606453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e2!4m3!3m2!1d4.8890939!2d114.94272769999999!4m3!3m2!1d4.8938043!2d114.9366032!4m3!3m2!1d4.8946273!2d114.936269!4m3!3m2!1d4.9235088!2d114.9367791!4m3!3m2!1d4.9122825!2d114.9495858!4m3!3m2!1d4.8890820999999995!2d114.94287639999999!5e0!3m2!1sen!2sbn!4v1505573811779" width="100%" height="80%" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-    <ion-item *ngFor="let task of tasks | async">
-      <p>{{task.name}}</p>
-      <p>Availablity: {{task.amount}}</p>
-    </ion-item>
-
-  </ion-list>
+<ion-card>
+<ion-item text-wrap>
+ Description: 
+ <p>Starts at Taman SOAS, passing through Kumbang Pasang and towards Jalan Perdana Menteri, passing Jalan Kebangasaan and back</p>
+ <br>
+ Total Distance: 
+ <p>10KM (10.8KM)</p> 
+</ion-item>
+</ion-card>
 
 </ion-content>

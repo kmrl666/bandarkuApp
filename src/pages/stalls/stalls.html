@@ -1,21 +1,53 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       Stalls
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
 
-  <ion-list>
+
+          <ion-title text-center>
+        
+            <h1 style="color:#05788B;">STALLS</h1>
+        
+          </ion-title>
+
+  <!-- <ion-list>
 
     <ion-item *ngFor="let task of tasks | async">
       <ion-icon name="md-pin" item-start large></ion-icon>
-      <h2>{{task.Name}}</h2>
+      <h2 text-wrap>{{task.Name}}</h2>
       <p>{{task.Type}}</p>
     </ion-item>
 
-  </ion-list>
+  </ion-list> -->
+  <ion-grid text-center>
+    <ion-row>
+      <ion-col>
+          <button ion-button (click)="refreshVendor()">By Name</button>
+      </ion-col>
+
+      <ion-col>
+          <button ion-button (click)="refreshType()">By Type</button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-card *ngFor="let task of tasks | async" (click)= "navigate(task.Name, task.Longtitude, task.Latitude)" >
+    
+      <ion-item style="background-color:#128CA6">
+          <ion-icon name={{task.Icon}} item-start large style="color:white"></ion-icon>
+          <h2 text-wrap style="color:white">{{task.Name}}</h2>
+          <p style="color:white">{{task.Type}}</p>
+          <ion-icon name='ios-arrow-forward' item-end small style="color:white"></ion-icon>
+        </ion-item>
+
+  </ion-card>
 
 </ion-content>

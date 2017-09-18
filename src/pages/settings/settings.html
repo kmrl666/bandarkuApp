@@ -1,20 +1,57 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Vendor 1
+      Settings
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-list>
+  <!-- <ion-list>
 
     <ion-item *ngFor="let task of tasks | async">
       <p>{{task.name}}</p>
       <p>Availablity: {{task.amount}}</p>
     </ion-item>
 
-  </ion-list>
+  </ion-list> -->
+
+  <ion-list>
+
+      <!-- <ion-item>
+        <ion-icon name="leaf" item-start></ion-icon>
+        Herbology
+        <ion-icon name="ios-arrow-forward-outline" item-end></ion-icon>
+      </ion-item> -->
+
+      <ion-item (click)="addFeedback()">
+          <ion-icon name="md-chatbubbles" item-start  style="color:#05788B"></ion-icon>
+        <h2 style="color:#05788B"> Send Feedback </h2>
+          <ion-icon name="ios-arrow-forward-outline" item-end style="color:#05788B"></ion-icon>
+        </ion-item>
+
+        <ion-item  [navPush]="aboutusPage">
+            <ion-icon name="ios-people" item-start  style="color:#05788B"></ion-icon>
+          <h2 style="color:#05788B"> About Us </h2>
+            <ion-icon name="ios-arrow-forward-outline" item-end style="color:#05788B"></ion-icon>
+          </ion-item>
+
+        <ion-item>
+          <ion-icon name="ios-information-circle" item-start  style="color:#05788B"></ion-icon>
+            <h2 style="color:#05788B"> Version </h2>
+          <ion-note item-end>Beta 0.06</ion-note>
+
+         </ion-item>
+
+         <ion-item text-center>
+            <ion-note *ngFor="let task of tasks | async">Latest Version: {{task.versionz}} </ion-note>
+         </ion-item> 
+         
+    </ion-list>
+
+
 
 </ion-content>
+
+

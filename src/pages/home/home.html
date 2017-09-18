@@ -1,18 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title text-center>
-      HOMEZIES
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content>
+    <br>
+    <iframe id="top" width="100%" height="13%" src="./assets/html/countdown.html" frameborder="0"></iframe>
+<br>
+<br>
+<br>
+<br>
 <div style="overflow:auto;">
-  <ion-slides>
+  <ion-slides  pager="true">
     <ion-slide *ngFor="let task of tasks | async">
+      <ion-card>
       <img src="{{task.Image}}">
 
-      <ion-card>
+      <ion-item text-wrap (click)="sendInfo(task.Icon, task.Name, task.Type, task.Organizer, task.Link, task.Description, task.Image, task.EventDate, task.Contact)">
+          <ion-icon name="ios-arrow-forward" item-right style="color:#05788B"></ion-icon>
+          <h2 style="color:#05788B">More Info</h2>
+        </ion-item>
+
+      </ion-card>
+      <!-- <ion-card>
        <ion-list>
 
         <ion-item text-wrap>
@@ -42,7 +48,7 @@
 
 
         </ion-list>
-      </ion-card>
+      </ion-card> -->
       <br>
       <br>
     </ion-slide>

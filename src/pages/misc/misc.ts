@@ -7,6 +7,7 @@ import { TranslatorPage } from '../translator/translator';
 import { RulesPage } from '../rules/rules';
 import { EmergencyPage } from '../emergency/emergency';
 import { SettingsPage } from '../settings/settings';
+import { FeedbackPage } from '../feedback/feedback';
 
 @Component({
   selector: 'page-misc',
@@ -18,12 +19,13 @@ export class MiscPage {
   rulesPage = RulesPage;
   emergencyPage = EmergencyPage;
   settingsPage = SettingsPage;
+  feedbackPage = FeedbackPage;
 
 tasks: FirebaseListObservable<any[]>;
 
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public alertCtrl: AlertController) {
 
-  	  this.tasks = db.list('/tasks/Bicycle/Vendor1');
+  	  this.tasks = db.list('/tasks/Feedbacks');
 
   }
 
@@ -35,10 +37,48 @@ tasks: FirebaseListObservable<any[]>;
  showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Success!',
-      subTitle: 'Bike Availability has been updated.',
+      subTitle: 'Thank you for your feedback!',
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  addFeedback(){
+    let prompt = this.alertCtrl.create({
+      title: 'Send a feedback to us!',
+      message: "Tell us on what to improve on the app",
+      inputs: [
+        {
+          name: 'email',
+          placeholder: 'E-mail/Name'
+        },
+        {
+          name: 'feedback',
+          placeholder: 'Feedback',
+          type: 'text'
+        }
+
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Send',
+          handler: data => {
+            this.tasks.push({
+              feedback:data.feedback,
+              email:data.email
+            });
+            this.showAlert();
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }

@@ -7,25 +7,20 @@
 </ion-header>
 
 <ion-content>
-<p>INSERT MAP HERE</p>
 
-<!--     <ion-slides>
-      <ion-slide *ngFor="let task of tasks | async"> -->
-<!--       <p>{{task.Name}}</p>
-      <p>Availablity: {{task.Link}}</p> -->
-<ion-item *ngFor="let task of tasks | async">
+<ion-item *ngFor="let task of tasks | async" style="background-color:transparent;">
   <ion-card>
-    <ion-list>
-      <ion-item>
-        <ion-icon name="bicycle" item-left></ion-icon>
-        {{task.Name}}
-        <br>
-      </ion-item>
 
-      <ion-item text-center>
-        {{task.Status}}
-      </ion-item>
-      <ion-list>
+      <button ion-item style="background-color:#05788B" block>
+          <ion-icon name="md-bicycle" item-start style="color:white"></ion-icon>
+         <div style="color:white"> {{task.Name}} </div>
+      </button>
+
+      <!-- <ion-item text-center>
+      {{task.Status}}
+      </ion-item> -->
+
+        <br>
 
         <ion-item>
           Becha: {{task.Becha}}
@@ -47,12 +42,13 @@
           Road: {{task.Road}}
         </ion-item>
 
-      </ion-list>
-    </ion-list>
+        <ion-item text-center (click)= "navigate(task.Name, task.Longtitude, task.Latitude)">
+            <button ion-button round small >Show Location</button>
+          </ion-item>
+
+
   </ion-card>
 </ion-item>
-<!-- </ion-slide>
 
-</ion-slides> -->
 
 </ion-content>

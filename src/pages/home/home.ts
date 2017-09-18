@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import { AlertController } from 'ionic-angular';
+import { AdsModalPage } from '../adsModal/adsModal'
 
 
 @Component({
@@ -18,10 +19,22 @@ tasks: FirebaseListObservable<any[]>;
 
   }
 
-   updateTask(key, amount) {
-    this.tasks.update(key, {amount: amount});
-    this.showAlert();
-      }
+  sendInfo(Icon, Name, Type, Organizer, Link, Description, Image, EventDate, Contact){
+
+    this.navCtrl.push(AdsModalPage, {
+      firstPassed: Icon,
+      secondPassed: Name,
+      thirdPassed: Type,
+      fourthPassed: Organizer,
+      fifthPassed: Link,
+      sixthPassed: Description,
+      seventhPassed: Image,
+      eigthPassed: EventDate,
+      ninthPassed: Contact,
+    })
+
+    
+  }
 
  showAlert() {
     let alert = this.alertCtrl.create({
